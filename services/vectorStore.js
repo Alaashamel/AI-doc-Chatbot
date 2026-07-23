@@ -23,6 +23,7 @@ async function addDocument(chunks, fileName) {
 
     console.log(`Document Added: ${fileName}`);
 }
+
 function getAllVectorStores() {
     return vectorStores;
 }
@@ -30,15 +31,16 @@ function getAllVectorStores() {
 function clearVectorStores() {
     vectorStores.length = 0;
 }
-async function searchDocuments(question, k = 3) {
+
+async function searchDocuments(question, k = 4) {
 
     let allResults = [];
 
     for (const item of vectorStores) {
 
-        const docs = await item.store.similaritySearch(question, k);
+        const docsWithScores = await item.store.similaritySearchWithScore(question, k);
 
-        docs.forEach(doc => {
+        docsWithScores.forEach(([doc, score]) => {
 
             allResults.push({
 
@@ -46,7 +48,7 @@ async function searchDocuments(question, k = 3) {
 
                 content: doc.pageContent,
 
-                score: doc.score || 0
+                score
 
             });
 
@@ -54,7 +56,9 @@ async function searchDocuments(question, k = 3) {
 
     }
 
-    return allResults;
+    allResults.sort((a, b) => b.score - a.score);
+
+    return allResults.slice(0, k);
 }
 
 module.exports = {

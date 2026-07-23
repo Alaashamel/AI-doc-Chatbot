@@ -179,7 +179,8 @@ function addAIMessage(message, sources = []) {
 
     div.className = "message ai-message";
 
-    let html = `<div>${message}</div>`;
+    const formattedMessage = marked.parse(message);
+    let html = `<div>${formattedMessage}</div>`;
 
     if (sources.length > 0) {
 
