@@ -3,10 +3,16 @@
 [![CI/CD Pipeline](https://github.com/Alaashamel/AI-doc-Chatbot/actions/workflows/ci.yml/badge.svg)](https://github.com/Alaashamel/AI-doc-Chatbot/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Alaashamel/AI-doc-Chatbot/pulls)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql)
+![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
 
 > Enterprise AI-powered document chat platform with RAG, multi-provider LLM support, and intelligent knowledge retrieval.
 
-![Demo](docs/demo.gif)
+Build intelligent AI assistants that can understand, search, and chat with your documents using Retrieval-Augmented Generation (RAG).
 
 ## Features
 
@@ -21,6 +27,8 @@
 - **Database** — PostgreSQL with Prisma ORM, proper migrations, and indexes
 - **Responsive** — Works on desktop, tablet, and mobile devices
 - **Accessibility** — ARIA labels, keyboard navigation, screen reader support
+- **Docker** — Full Docker Compose setup with PostgreSQL and Redis
+- **CI/CD** — GitHub Actions pipeline with lint, test, build, and E2E
 
 ## Quick Start
 
@@ -95,7 +103,7 @@ docker compose exec app npm run db:migrate
 
 ## Architecture
 
-```
+```text
 src/
 ├── app/                    # Next.js App Router pages and API routes
 │   ├── api/               # API endpoints
@@ -147,6 +155,33 @@ src/
 ### Health
 - `GET /api/health` — Health check
 
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js 15, React 19, TypeScript, TailwindCSS, shadcn/ui |
+| Backend | Next.js API Routes, Node.js |
+| Database | PostgreSQL, Prisma ORM |
+| AI | OpenAI, Anthropic, Google Gemini, Groq, Mistral, DeepSeek |
+| Auth | NextAuth.js (Google, GitHub, Credentials) |
+| Animations | Framer Motion |
+| Testing | Jest, Playwright |
+| DevOps | Docker, Docker Compose, GitHub Actions |
+
+## Roadmap
+
+- [x] Multi-LLM Support
+- [x] Enterprise RAG Pipeline
+- [x] Authentication (Google, GitHub, Email)
+- [x] Streaming Chat
+- [x] Docker Deployment
+- [x] CI/CD Pipeline
+- [ ] Vector Database (Pinecone, Qdrant, Chroma)
+- [ ] Admin Dashboard with Analytics
+- [ ] Mobile App
+- [ ] Voice Assistant
+- [ ] Team Collaboration
+
 ## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
@@ -160,3 +195,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with by **Alaa Shamel**
