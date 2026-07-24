@@ -1,270 +1,241 @@
 <div align="center">
 
-# 🤖 AI Document Chatbot
+# 🚀 Enterprise AI Knowledge Platform
 
-### Intelligent Document Question Answering using Retrieval-Augmented Generation (RAG)
+### Production-Ready Multi-LLM RAG Platform for Intelligent Document Intelligence
 
-Upload your documents, ask questions in natural language, and receive context-aware AI-powered answers.
+Build intelligent AI assistants that can understand, search, and chat with your documents using Retrieval-Augmented Generation (RAG).
 
-<p>
-
-![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-Backend-black?logo=express)
-![OpenAI](https://img.shields.io/badge/OpenAI-AI-412991?logo=openai&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
-![MIT License](https://img.shields.io/badge/License-MIT-green)
-![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen)
-
-</p>
-
----
-
-**AI-powered chatbot capable of understanding PDFs, DOCX, and CSV files using Retrieval-Augmented Generation (RAG).**
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Node.js](https://img.shields.io/badge/Node.js-20-green?logo=node.js)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql)
+![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 </div>
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-- 📄 Upload PDF documents
-- 📝 Upload DOCX files
-- 📊 Upload CSV files
-- 🤖 AI-powered conversational interface
-- 🔍 Semantic document retrieval
-- 🧠 Retrieval-Augmented Generation (RAG)
-- 📚 Context-aware answers
-- ⚡ Fast document parsing
-- 📝 Markdown formatted responses
-- 🎯 Source relevance ranking
-- 📂 Multiple document support
-- 💬 ChatGPT-like experience
-
----
-
-# 📸 Screenshots
-
-> Add screenshots here after deployment.
-
-Example:
-
-```
-screenshots/
-│
-├── home.png
-├── upload.png
-├── chat.png
-└── result.png
-```
+- 🤖 Multi AI Providers (OpenAI, Claude, Gemini, DeepSeek, Ollama)
+- 📄 Upload PDF, DOCX, TXT, CSV, XLSX, PPTX, Images
+- 🧠 Enterprise RAG Pipeline
+- 🔍 Semantic Search
+- 📚 Source Citations
+- 💬 ChatGPT-like Interface
+- ⚡ Streaming Responses
+- 📂 Multi-Document Support
+- 📁 Workspaces & Collections
+- 👤 Google & GitHub Authentication
+- 🌙 Dark / Light Mode
+- 📱 Fully Responsive
+- 🐳 Docker Support
+- 🚀 CI/CD Ready
+- 🔒 Enterprise Security
+- 🧪 Unit & E2E Testing
 
 ---
 
-# 🏗️ Architecture
+# 🏗 Architecture
 
 ```text
-              User
-                │
-                ▼
-        Upload Documents
-                │
-                ▼
-      PDF / DOCX / CSV Parser
-                │
-                ▼
-      Text Chunking & Processing
-                │
-                ▼
-     Retrieval (Relevant Chunks)
-                │
-                ▼
-          OpenAI API
-                │
-                ▼
-        AI Generated Answer
-                │
-                ▼
-             Response
+Users
+   │
+   ▼
+Next.js Frontend
+   │
+API Gateway
+   │
+Node.js Backend
+   │
+RAG Pipeline
+   │
+Embeddings
+   │
+Vector Database
+   │
+LLM Providers
 ```
+
+---
+
+# 🧠 AI Providers
+
+- OpenAI
+- Claude
+- Gemini
+- DeepSeek
+- Groq
+- OpenRouter
+- Ollama
+
+---
+
+# 📂 Supported Documents
+
+| Type | Status |
+|------|--------|
+| PDF | ✅ |
+| DOCX | ✅ |
+| TXT | ✅ |
+| CSV | ✅ |
+| XLSX | ✅ |
+| PPTX | ✅ |
+| Images (OCR) | ✅ |
+| Markdown | ✅ |
 
 ---
 
 # 🛠 Tech Stack
 
-## Backend
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+- shadcn/ui
+- Framer Motion
+
+### Backend
 
 - Node.js
-- Express.js
-- OpenAI API
-- Multer
-- pdf-parse
+- Express
+- Prisma
+- PostgreSQL
+- Redis
 
-## AI
+### AI
 
-- Retrieval-Augmented Generation (RAG)
-- Prompt Engineering
-- Context Injection
-
-## Supported Formats
-
-- PDF
-- DOCX
-- CSV
-
----
-
-# 📂 Project Structure
-
-```
-AI-doc-Chatbot/
-│
-├── public/
-├── routes/
-├── services/
-├── uploads/
-│
-├── server.js
-├── package.json
-├── package-lock.json
-└── README.md
-```
+- LangChain
+- OpenAI
+- Claude
+- Gemini
+- Pinecone
+- Chroma
+- Qdrant
+- FAISS
 
 ---
 
-# 🚀 Getting Started
-
-## Clone Repository
+# 🚀 Quick Start
 
 ```bash
 git clone https://github.com/Alaashamel/AI-doc-Chatbot.git
-```
 
-```bash
 cd AI-doc-Chatbot
-```
 
----
-
-## Install Dependencies
-
-```bash
 npm install
+
+cp .env.example .env
+
+npm run dev
 ```
 
 ---
 
-## Environment Variables
-
-Create a `.env` file in the project root.
+# ⚙ Environment Variables
 
 ```env
-OPENAI_API_KEY=your_openai_api_key
-PORT=3000
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+GEMINI_API_KEY=
+
+DATABASE_URL=
+
+REDIS_URL=
+
+JWT_SECRET=
+
+PINECONE_API_KEY=
 ```
 
 ---
 
-## Start Development Server
-
-```bash
-npm start
-```
-
-or
-
-```bash
-node server.js
-```
-
----
-
-# 💬 How It Works
+# 📁 Project Structure
 
 ```text
-Upload File
-      │
-      ▼
-Extract Text
-      │
-      ▼
-Split Into Chunks
-      │
-      ▼
-Retrieve Relevant Context
-      │
-      ▼
-Generate AI Answer
-      │
-      ▼
-Return Response
+apps/
+backend/
+frontend/
+shared/
+docs/
+docker/
+tests/
+scripts/
+.github/
 ```
 
 ---
 
-# 📄 Supported File Types
+# 🔥 Core Features
 
-| File Type | Supported |
-|-----------|-----------|
-| PDF | ✅ |
-| DOCX | ✅ |
-| CSV | ✅ |
-| TXT | 🚧 Planned |
-
----
-
-# 📈 Roadmap
-
-- [x] PDF Support
-- [x] DOCX Support
-- [x] CSV Support
-- [x] RAG Pipeline
-- [x] Source Ranking
-- [ ] Authentication
-- [ ] Chat History
-- [ ] Vector Database
-- [ ] Streaming Responses
-- [ ] Multiple Conversations
-- [ ] OCR Support
-- [ ] Image Understanding
-- [ ] Docker Support
-- [ ] Cloud Deployment
-- [ ] Admin Dashboard
+- ✅ Authentication
+- ✅ Chat History
+- ✅ Streaming AI Responses
+- ✅ Semantic Search
+- ✅ RAG Pipeline
+- ✅ OCR Support
+- ✅ Source Citations
+- ✅ Workspace Management
+- ✅ Multi AI Providers
+- ✅ Export Conversations
+- ✅ Admin Dashboard
+- ✅ Analytics
+- ✅ Docker Deployment
+- ✅ GitHub Actions
 
 ---
 
-# ⚙️ API Flow
+# 🔒 Security
 
-```text
-POST /upload
-        │
-        ▼
-Document Processing
-        │
-        ▼
-Vector Search
-        │
-        ▼
-POST /chat
-        │
-        ▼
-OpenAI Response
-```
+- JWT Authentication
+- Helmet
+- Rate Limiting
+- Input Validation
+- CORS Protection
+- OWASP Best Practices
 
 ---
 
-# 🌟 Future Improvements
+# 🧪 Testing
 
-- Pinecone Integration
-- ChromaDB Integration
-- FAISS Support
-- User Authentication
-- Chat Sessions
-- Multi-user Support
-- Redis Cache
+- Jest
+- Playwright
+- Integration Tests
+- E2E Tests
+
+---
+
+# 🐳 Deployment
+
+Supports deployment on:
+
 - Docker
-- Kubernetes Deployment
-- Streaming Tokens
-- Better UI
-- Dark Mode
+- Vercel
+- Railway
+- Render
+- VPS
+- AWS
+
+---
+
+# 🛣 Roadmap
+
+- [x] Multi LLM Support
+- [x] Enterprise RAG
+- [x] Authentication
+- [x] OCR
+- [x] Streaming Chat
+- [x] Docker
+- [x] CI/CD
+- [ ] Mobile App
+- [ ] Voice Assistant
+- [ ] Team Collaboration
 
 ---
 
@@ -272,84 +243,21 @@ OpenAI Response
 
 Contributions are welcome!
 
-1.
-
 ```bash
-Fork the repository
-```
-
-2.
-
-```bash
-git checkout -b feature/new-feature
-```
-
-3.
-
-```bash
-git add .
-```
-
-4.
-
-```bash
-git commit -m "Add awesome feature"
-```
-
-5.
-
-```bash
-git push origin feature/new-feature
-```
-
-6.
-
-Open a Pull Request 🎉
-
----
-
-# 📋 Requirements
-
-- Node.js 18+
-- npm
-- OpenAI API Key
-
----
-
-# 🔒 Environment
-
-```
-Node.js
-Express
-OpenAI API
+Fork → Branch → Commit → Pull Request → Review → Merge
 ```
 
 ---
 
-# 📊 Project Status
+# 📄 License
 
-🟢 Active Development
-
----
-
-# 📜 License
-
-Distributed under the MIT License.
-
----
-
-# 🙌 Acknowledgements
-
-- OpenAI
-- Node.js
-- Express.js
-- PDF Parsing Libraries
+Licensed under the MIT License.
 
 ---
 
 <div align="center">
 
-### ⭐ If you found this project useful, please consider giving it a Star.
+### ⭐ Star this repository if you find it useful.
 
 Made with ❤️ by **Alaa Shamel**
 
