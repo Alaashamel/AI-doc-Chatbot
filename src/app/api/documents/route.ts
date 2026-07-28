@@ -30,7 +30,7 @@ export async function GET() {
       },
     });
 
-    const formatted = documents.map((d) => ({
+    const formatted = documents.map((d: typeof documents[number] & { _count: { chunks: number } }) => ({
       id: d.id,
       name: d.name,
       type: d.type,

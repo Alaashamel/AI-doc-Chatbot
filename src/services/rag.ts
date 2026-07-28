@@ -1,4 +1,4 @@
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import type { DocumentChunk } from "@/types";
 import prisma from "@/lib/prisma";
 import { CHUNK_SIZE, CHUNK_OVERLAP, RETRIEVAL_K } from "@/config/constants";
@@ -29,7 +29,7 @@ export async function processDocument(
 
   const docs = await splitter.createDocuments([text]);
 
-  const chunks: ProcessedChunk[] = docs.map((doc, index) => ({
+  const chunks: ProcessedChunk[] = docs.map((doc: { pageContent: string }, index: number) => ({
     content: doc.pageContent,
     metadata: {
       documentId,

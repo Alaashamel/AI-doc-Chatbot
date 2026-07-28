@@ -23,7 +23,7 @@ export async function GET() {
       },
     });
 
-    const formatted = folders.map((f) => ({
+    const formatted = folders.map((f: typeof folders[number] & { _count: { conversations: number } }) => ({
       id: f.id,
       name: f.name,
       conversationCount: f._count.conversations,
