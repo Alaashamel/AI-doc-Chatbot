@@ -60,6 +60,7 @@ model User {
   folders        Folder[]
   settings       UserSettings?
   apiUsage       ApiUsage[]
+  collections    DocumentCollection[]
 }
 
 model UserSettings {
@@ -124,7 +125,7 @@ model Conversation {
   isPinned  Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  userId    String?
+  userId    String
   folderId  String?
 
   user     User       @relation(fields: [userId], references: [id], onDelete: Cascade)

@@ -386,8 +386,8 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   );
 
   const folderMap = useMemo(() => {
-    if (!folders) return new Map<string, ChatFolder[]>();
-    const map = new Map<string, ChatFolder[]>();
+    if (!folders) return new Map<string, ChatConversation[]>();
+    const map = new Map<string, ChatConversation[]>();
     for (const conv of filteredConversations) {
       if (conv.folderId) {
         const existing = map.get(conv.folderId) ?? [];

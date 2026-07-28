@@ -110,7 +110,7 @@ export async function POST(request: Request) {
 
     const messagesForAI = [
       { role: "system", content: ragPrompt },
-      ...recentMessages.filter((m) => m.role !== "system"),
+      ...recentMessages.filter((m: { role: string; content: string }) => m.role !== "system"),
     ];
 
     const stream = await streamChatCompletion({

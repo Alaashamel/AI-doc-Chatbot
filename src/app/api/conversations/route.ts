@@ -31,7 +31,7 @@ export async function GET() {
       },
     });
 
-    const formatted = conversations.map((c) => ({
+    const formatted = conversations.map((c: typeof conversations[number] & { _count: { messages: number }; folder: { id: string; name: string } | null }) => ({
       id: c.id,
       title: c.title,
       isPinned: c.isPinned,

@@ -10,10 +10,9 @@ export async function extractText(filePath: string, fileType: string): Promise<s
   const ext = fileType.toLowerCase();
 
   if (ext === ".pdf") {
-    const { PDFParse } = await import("pdf-parse");
-    const parser = new PDFParse();
+    const pdf = (await import("pdf-parse")).default;
     const buffer = await fs.readFile(filePath);
-    const data = await parser.parseBuffer(buffer);
+    const data = await pdf(buffer);
     return data.text;
   }
 

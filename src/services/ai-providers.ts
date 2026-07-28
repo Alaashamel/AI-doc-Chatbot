@@ -104,7 +104,7 @@ async function streamAnthropic(
 ): Promise<ReadableStream> {
   const chat = new ChatAnthropic({
     apiKey: process.env.ANTHROPIC_API_KEY,
-    modelName: model,
+    model,
     temperature,
     maxTokens,
   });
@@ -145,7 +145,7 @@ async function streamGoogle(
 ): Promise<ReadableStream> {
   const chat = new ChatGoogleGenerativeAI({
     apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY,
-    modelName: model,
+    model,
     temperature,
     maxOutputTokens: maxTokens,
   });
@@ -186,7 +186,7 @@ async function streamGroq(
 ): Promise<ReadableStream> {
   const chat = new ChatGroq({
     apiKey: process.env.GROQ_API_KEY,
-    modelName: model,
+    model,
     temperature,
     maxTokens,
   });
@@ -227,7 +227,7 @@ async function streamMistral(
 ): Promise<ReadableStream> {
   const chat = new ChatMistralAI({
     apiKey: process.env.MISTRAL_API_KEY,
-    modelName: model,
+    model,
     temperature,
     maxTokens,
   });

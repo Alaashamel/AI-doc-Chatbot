@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type Components } from "react";
+import { useState } from "react";
 import { useTheme } from "next-themes";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
